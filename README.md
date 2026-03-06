@@ -1,107 +1,120 @@
-# testing-class1
+# Taller de Pruebas Unitarias con Jest
 
-Este proyecto usa Node.js + npm y Jest para ejecutar pruebas automáticas.
+Este proyecto contiene ejercicios de pruebas unitarias en JavaScript usando Jest.
 
-El objetivo de este README es servir para dos tipos de usuario en el mismo lugar:
+## ¿Qué hay en este proyecto?
 
-- Persona principiante (paso a paso, explicado simple).
-- Persona o agente con experiencia (comandos directos al final).
+Este taller incluye 5 ejercicios con sus respectivas pruebas:
 
-## 1) Qué necesitas antes de empezar
+1. **Conversor de Temperatura** - Convierte entre Celsius y Fahrenheit
+2. **Validador de Números Primos** - Verifica si un número es primo
+3. **Cuenta Bancaria** - Simula operaciones bancarias básicas
+4. **Sistema de Alquiler de Vehículos** - Gestiona el alquiler de vehículos
+5. **Carrito de Compras** - Calcula totales con descuentos e impuestos
 
-### Requisitos mínimos
+## ¿Qué necesitas para empezar?
 
-- Node.js instalado (recomendado: versión LTS).
-- npm instalado (viene incluido con Node.js).
+- Node.js instalado en tu computadora
+- Un editor de código (como Visual Studio Code)
 
-### Cómo verificar que está todo bien instalado
+## Cómo instalar
 
-Abre una terminal en tu computadora y ejecuta:
-
-```bash
-node -v
-npm -v
-```
-
-Si ambos comandos devuelven una versión (por ejemplo `v22.x.x` y `10.x.x`), ya puedes continuar.
-
-Si alguno falla, instala o reinstala Node.js desde su sitio oficial.
-
-## 2) Abrir el proyecto correctamente
-
-Debes ejecutar comandos dentro de la carpeta raíz del proyecto, donde está el archivo `package.json`.
-
-En este caso, la raíz es esta carpeta:
-
-`c:\Users\andre\Desktop\testing-class-PB`
-
-Puedes verificar que estás en la carpeta correcta si al listar archivos ves `package.json`.
-
-## 3) Instalar paquetes (dependencias)
-
-### Para principiantes
-
-Ejecuta este comando una sola vez al clonar/descargar el proyecto, o cada vez que cambie `package.json`:
+1. Clona este repositorio o descárgalo
+2. Abre la terminal en la carpeta del proyecto
+3. Ejecuta este comando para instalar las dependencias:
 
 ```bash
-npm i
+npm install
 ```
 
-Qué hace `npm i`:
+## Cómo ejecutar las pruebas
 
-- Lee el archivo `package.json`.
-- Descarga las librerías necesarias (por ejemplo `jest`).
-- Crea la carpeta `node_modules`.
-- Deja el proyecto listo para correr pruebas.
-
-Cuando termine, no debería haber errores en rojo.
-
-## 4) Ejecutar tests
-
-### Comando principal
+Para ejecutar todas las pruebas, usa:
 
 ```bash
 npm test
 ```
 
-Este comando ejecuta el script `test` definido en `package.json`, que corre Jest.
-
-Comando equivalente:
+Para ejecutar las pruebas de un archivo específico:
 
 ```bash
-npm run test
+npm test -- nombreDelArchivo.test.js
 ```
 
-### Qué resultado esperar
-
-- Si todo está bien: verás tests en estado `PASS`.
-- Si algo falla: verás `FAIL` y el detalle del error para corregirlo.
-
-Las pruebas del proyecto están en `src/tests/`.
-
-## 5) Problemas comunes (rápido)
-
-### Error: `npm` o `node` no se reconoce
-
-Significa que Node.js no está instalado o no está en el PATH del sistema.
-
-Solución:
-
-1. Reinstalar Node.js.
-2. Cerrar y abrir la terminal.
-3. Volver a probar `node -v` y `npm -v`.
-
-### Error al ejecutar `npm test` en Windows por variables de entorno
-
-El script actual usa `NODE_OPTIONS=...` (formato estilo Unix). Si falla en tu terminal de Windows, prueba ejecutar los tests desde Git Bash. Otra opción técnica es ajustar el script con `cross-env`.
-
-## 6) Resumen rápido (para quien ya sabe)
-
-Desde la raíz del proyecto:
-
+Por ejemplo:
 ```bash
-npm i
-npm test
+npm test -- convertirTemperatura.test.js
 ```
 
-Listo. Con eso instalas dependencias y corres toda la suite de tests.
+## Estructura del proyecto
+
+```
+taller-pruebas-unitarias/
+├── src/
+│   ├── convertirTemperatura.js
+│   ├── validarNumeroPrimo.js
+│   ├── cuentaBancaria.js
+│   ├── sistemaAlquilerVehiculos.js
+│   ├── carritoComprasDI.js
+│   └── tests/
+│       ├── convertirTemperatura.test.js
+│       ├── validarNumeroPrimo.test.js
+│       ├── cuentaBancaria.test.js
+│       ├── sistemaAlquilerVehiculos.test.js
+│       └── carritoComprasDI.test.js
+├── package.json
+└── README.md
+```
+
+## Descripción de cada ejercicio
+
+### 1. Conversor de Temperatura
+Convierte temperaturas entre Celsius y Fahrenheit. Valida que la unidad sea correcta y redondea los resultados a 2 decimales.
+
+### 2. Validador de Números Primos
+Determina si un número es primo. Los números menores a 2 no son primos.
+
+### 3. Cuenta Bancaria
+Permite hacer depósitos y retiros. Valida que los montos sean válidos y que haya saldo suficiente. Mantiene un historial de transacciones.
+
+### 4. Sistema de Alquiler de Vehículos
+Gestiona el alquiler de vehículos. Valida que el vehículo no esté alquilado y que las fechas sean correctas. Calcula el costo por días.
+
+### 5. Carrito de Compras
+Calcula el total de una compra aplicando descuentos (cupones DESC10 y DESC20) e impuestos del 19%.
+
+## Capturas de las pruebas
+
+### Todas las pruebas pasando
+![Todas las pruebas](./capturas/todas-las-pruebas.png)
+
+### Conversor de Temperatura
+![Test Conversor Temperatura](./capturas/test-temperatura.png)
+
+### Validador de Números Primos
+![Test Números Primos](./capturas/test-primos.png)
+
+### Cuenta Bancaria
+![Test Cuenta Bancaria](./capturas/test-cuenta-bancaria.png)
+
+### Sistema de Alquiler de Vehículos
+![Test Alquiler Vehículos](./capturas/test-alquiler.png)
+
+### Carrito de Compras
+![Test Carrito Compras](./capturas/test-carrito.png)
+
+## Notas importantes
+
+- Este proyecto usa `cross-env` para que funcione correctamente en Windows
+- Todos los tests deben pasar para considerar el ejercicio completo
+- Los archivos de implementación están en la carpeta `src/`
+- Los archivos de pruebas están en la carpeta `src/tests/`
+
+## Autores
+
+Jean Restrepo Restrepo Casafús
+Juan Camilo Restrepo Henao
+
+## Licencia
+
+Este proyecto es de uso educativo.

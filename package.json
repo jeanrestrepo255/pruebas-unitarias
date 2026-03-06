@@ -7,7 +7,7 @@
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jean Pierre & Juan Camilo",
   "license": "ISC",
   "description": "Este proyecto usa Node.js + npm y Jest para ejecutar pruebas automáticas.",
   "devDependencies": {
@@ -203,10 +203,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Andres-debug/testing-class-PB.git"
+    "url": "git+https://github.com/jeanrestrepo255/taller-pruebas-unitarias.git"
   },
   "bugs": {
-    "url": "https://github.com/Andres-debug/testing-class-PB/issues"
+    "url": "https://github.com/jeanrestrepo255/taller-pruebas-unitarias/issues"
   },
-  "homepage": "https://github.com/Andres-debug/testing-class-PB#readme"
+  "homepage": "https://github.com/jeanrestrepo255/taller-pruebas-unitarias#readme"
 }
