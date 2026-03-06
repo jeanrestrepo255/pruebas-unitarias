@@ -112,8 +112,8 @@ Calcula el total de una compra aplicando descuentos (cupones DESC10 y DESC20) e 
 
 ## Autores
 
-Jean Restrepo Restrepo Casafús
-Juan Camilo Restrepo Henao
+- Jean Restrepo Restrepo Casafús
+- Juan Camilo Restrepo Henao
 
 ## Licencia
 
